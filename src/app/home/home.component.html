@@ -1,0 +1,27 @@
+<td-layout-nav title="Open Source Projects" logo="assets/icons/teradata.svg">
+  <div class="md-padding">
+    <div layout-gt-xs="row" layout-wrap>
+      <template let-item let-last="last" ngFor [ngForOf]="items">
+        <a href="{{item.link}}" class="md-card-link" target="_blank" flex-md="50" flex-gt-md="25" layout="column">
+          <md-card href class="md-card-colored" flex>
+            <md-toolbar class="bgc-{{item.color}}" layout="column" layout-align="center center" layout-padding>
+              <md-icon *ngIf="item.icon" class="md-icon-font-xl tc-white">{{item.icon}}</md-icon>
+              <md-icon class="md-icon-src" *ngIf="item.src" svgSrc="{{item.src}}"></md-icon>
+            </md-toolbar>
+            <md-card-content>
+              <div layout="column" layout-padding>
+                <div class="md-subhead">{{item.title}}</div>
+                <div class="md-caption tc-grey-600"> {{item.description}} </div>   
+              </div>
+            </md-card-content>
+          </md-card>
+        </a>
+      </template>
+    </div>
+  </div>
+  <div layout="row" layout-align="start center" layout-padding>
+    <span class="md-caption">Copyright &copy; 2016 Teradata. All rights reserved</span>
+    <span flex></span>
+    <md-icon class="md-icon-ux" svgSrc="assets/icons/teradata.svg"></md-icon>
+  </div>
+</td-layout-nav>
