@@ -1,8 +1,8 @@
-# Covalent QuickStart
+# Teradata Github landing page
 
-Quickstart App with @covalent packages
+Landing page for open source projects. Built on [Covalent](https://teradata.github.io/covalent/)
 
-## Setup
+## Local Dev
 
 * Ensure you have Node 4.4 and NPM 3+ installed.
 * Install Angular CLI `npm i -g angular-cli@1.0.0-beta.8`
