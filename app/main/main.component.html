@@ -1,0 +1,12 @@
+<td-layout #layout title="Open Source" logo="assets/icons/teradata.svg">
+  <md-nav-list menu-items>
+    <template let-item let-last="last" ngFor [ngForOf]="routes">
+      <a md-list-item target="_blank" href="{{item.link}}" (click)="layout.close()">
+        <md-icon *ngIf="item.icon">{{item.icon}}</md-icon>
+        <md-icon *ngIf="item.src" svgSrc="{{item.src}}"></md-icon>
+        {{item.title}}
+      </a>
+    </template>
+  </md-nav-list>
+  <router-outlet></router-outlet>
+</td-layout>

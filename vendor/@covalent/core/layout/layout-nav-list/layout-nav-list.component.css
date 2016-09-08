@@ -1,0 +1,50 @@
+/**
+ * Mixin that creates a new stacking context.
+ * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+ */
+:host md-sidenav-layout > md-content {
+  margin-left: 0 !important; }
+
+@media (min-width: 600px) {
+  :host md-sidenav-layout {
+    display: flex;
+    height: 100%; }
+    :host md-sidenav-layout > md-sidenav {
+      display: flex;
+      position: relative;
+      height: 100%;
+      width: 382px;
+      flex: 0 0 auto;
+      transition: none; }
+      :host md-sidenav-layout > md-sidenav.md-sidenav-closed, :host md-sidenav-layout > md-sidenav.md-sidenav-closing {
+        visibility: visible;
+        transform: translate3d(0, 0, 0); }
+    :host md-sidenav-layout > md-content {
+      margin-left: 0 !important;
+      display: flex;
+      flex-grow: 1; } }
+
+@media (max-width: 599px) {
+  :host md-sidenav-layout > md-sidenav.md-sidenav-opened, :host md-sidenav-layout > md-sidenav.md-sidenav-opening, :host md-sidenav-layout > md-sidenav.md-sidenav-closing {
+    z-index: 3; }
+  :host md-sidenav-layout > md-content {
+    z-index: 2; } }
+
+md-toolbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index: 1; }
+  md-toolbar.md-primary {
+    color: white; }
+
+.md-sidenav-left {
+  z-index: 1; }
+
+.list {
+  background-color: #fff;
+  text-align: start; }
+
+.content {
+  overflow: hidden;
+  padding-bottom: 65px; }
+
+/*# sourceMappingURL=layout-nav-list.component.css.map */

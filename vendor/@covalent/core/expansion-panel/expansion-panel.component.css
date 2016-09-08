@@ -1,0 +1,38 @@
+:host {
+  background-color: #fff;
+  display: block;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }
+  :host .panel {
+    transition: 1s all ease;
+    margin: 0; }
+  :host:first-of-type .td-expanded {
+    margin-bottom: 16px; }
+  :host:not(:first-of-type):not(:last-of-type) .td-expanded {
+    margin-top: 16px;
+    margin-bottom: 16px; }
+  :host:last-of-type .td-expanded {
+    margin-top: 16px; }
+  :host md-nav-list:first-of-type,
+  :host md-list:first-of-type {
+    padding-top: 0; }
+
+.md-disabled, .md-disabled * {
+  color: #9e9e9e; }
+
+md-nav-list {
+  padding: 0; }
+
+md-icon {
+  color: #9e9e9e; }
+
+.td-expansion-primary,
+.td-expansion-secondary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px; }
+
+.td-expansion-secondary {
+  color: #616161; }
+
+/*# sourceMappingURL=expansion-panel.component.css.map */

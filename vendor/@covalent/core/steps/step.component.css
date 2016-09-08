@@ -1,0 +1,86 @@
+:host:not(:last-of-type) .td-line {
+  border-left: 1px solid gainsboro; }
+
+md-nav-list {
+  padding: 0; }
+
+.md-caption {
+  color: #616161; }
+
+.md-disabled, .md-disabled * {
+  color: #9e9e9e; }
+
+.md-warn, .md-warn * {
+  color: #d32f2f; }
+
+.md-complete {
+  color: #388e3c; }
+
+md-icon.md-warn {
+  font-size: 24px;
+  height: 24px;
+  width: 24px; }
+
+md-icon.md-complete {
+  font-size: 26px;
+  height: 24px;
+  width: 24px; }
+
+.td-step {
+  position: relative;
+  min-height: 28px;
+  margin-top: 8px; }
+
+.td-step-status {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  width: 32px;
+  padding-top: 5px;
+  text-align: center; }
+
+.td-circle {
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  border-radius: 99%;
+  position: relative;
+  left: 5px;
+  color: #ffffff;
+  text-align: center; }
+  .td-circle.md-active {
+    background-color: #1976d2; }
+  .td-circle.md-inactive {
+    background-color: #9e9e9e; }
+  .td-circle md-icon {
+    fill: #ffffff;
+    margin-top: 2px;
+    font-weight: bold; }
+
+.td-triangle {
+  position: relative;
+  left: 1px;
+  color: #d32f2f; }
+
+.td-line {
+  position: absolute;
+  left: 16px;
+  bottom: 0px;
+  top: 36px; }
+
+.td-step-sublabel {
+  line-height: 14px;
+  font-weight: normal; }
+
+.td-step-active,
+:host td-step-summary,
+:host td-step-actions {
+  padding-top: 16px;
+  padding-left: 16px;
+  display: block; }
+
+:host td-step-actions {
+  margin-bottom: 16px; }
+
+/*# sourceMappingURL=step.component.css.map */

@@ -1,0 +1,126 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@covalent/json-formatter@0.6.0",
+        "scope": "@covalent",
+        "escapedName": "@covalent%2fjson-formatter",
+        "name": "@covalent/json-formatter",
+        "rawSpec": "0.6.0",
+        "spec": "0.6.0",
+        "type": "version"
+      },
+      "/Users/kyleledbetter/Sites/teradata.github.io"
+    ]
+  ],
+  "_from": "@covalent/json-formatter@0.6.0",
+  "_id": "@covalent/json-formatter@0.6.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@covalent/json-formatter",
+  "_nodeVersion": "4.4.4",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/json-formatter-0.6.0.tgz_1471635965492_0.14565003593452275"
+  },
+  "_npmUser": {
+    "name": "emoralesb05",
+    "email": "emoralesb05@gmail.com"
+  },
+  "_npmVersion": "2.15.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@covalent/json-formatter@0.6.0",
+    "scope": "@covalent",
+    "escapedName": "@covalent%2fjson-formatter",
+    "name": "@covalent/json-formatter",
+    "rawSpec": "0.6.0",
+    "spec": "0.6.0",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npmjs.org/@covalent/json-formatter/-/json-formatter-0.6.0.tgz",
+  "_shasum": "b288dde361a429c191bcc9d9e31e876ab68dd1b1",
+  "_shrinkwrap": null,
+  "_spec": "@covalent/json-formatter@0.6.0",
+  "_where": "/Users/kyleledbetter/Sites/teradata.github.io",
+  "author": {
+    "name": "Teradata UX"
+  },
+  "bugs": {
+    "url": "https://github.com/teradata/covalent/issues"
+  },
+  "contributors": [
+    {
+      "name": "Kyle Ledbetter",
+      "email": "kyle.ledbetter@teradata.com"
+    },
+    {
+      "name": "Richa Vyas",
+      "email": "richa.vyas@teradata.com"
+    },
+    {
+      "name": "Ed Morales",
+      "email": "eduardo.morales@teradata.com"
+    },
+    {
+      "name": "Jason Weaver",
+      "email": "jason.weaver@teradata.com"
+    },
+    {
+      "name": "Jeremy Wilken",
+      "email": "jeremy.wilken@teradata.com"
+    }
+  ],
+  "dependencies": {
+    "@covalent/core": "0.6.0"
+  },
+  "description": "Teradata UI Platform JSON Formatter Module",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b288dde361a429c191bcc9d9e31e876ab68dd1b1",
+    "tarball": "https://registry.npmjs.org/@covalent/json-formatter/-/json-formatter-0.6.0.tgz"
+  },
+  "engines": {
+    "node": ">4.4 < 5",
+    "npm": ">= 3"
+  },
+  "homepage": "https://github.com/teradata/covalent#readme",
+  "keywords": [
+    "angular",
+    "components",
+    "reusable",
+    "json",
+    "formatter",
+    "pretty"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "emoralesb05",
+      "email": "emoralesb05@gmail.com"
+    }
+  ],
+  "name": "@covalent/json-formatter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teradata/covalent.git"
+  },
+  "scripts": {},
+  "version": "0.6.0",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">4.4 < 5",
+        "npm": ">= 3"
+      },
+      "pkgid": "@covalent/json-formatter@0.6.0"
+    }
+  ]
+}

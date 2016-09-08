@@ -1,0 +1,11 @@
+/**
+ * Mixin that creates a new stacking context.
+ * see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+ */
+:host md-toolbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index: 1; }
+  :host md-toolbar.md-primary {
+    color: white; }
+
+/*# sourceMappingURL=layout.component.css.map */

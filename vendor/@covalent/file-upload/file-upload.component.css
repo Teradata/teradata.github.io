@@ -1,0 +1,83 @@
+/**
+ * A collection of mixins and CSS classes that can be used to apply elevation to a material
+ * element.
+ * See: https://www.google.com/design/spec/what-is-material/elevation-shadows.html
+ * Examples:
+ *
+ *
+ * .md-foo {
+ *   @include $md-elevation(2);
+ *
+ *   &:active {
+ *     @include $md-elevation(8);
+ *   }
+ * }
+ *
+ * <div id="external-card" class="md-elevation-z2"><p>Some content</p></div>
+ *
+ * For an explanation of the design behind how elevation is implemented, see the design doc at
+ * https://goo.gl/Kq0k9Z.
+ */
+/**
+ * The css property used for elevation. In most cases this should not be changed. It is exposed
+ * as a variable for abstraction / easy use when needing to reference the property directly, for
+ * example in a will-change rule.
+ */
+/** The default duration value for elevation transitions. */
+/** The default easing value for elevation transitions. */
+/**
+ * Applies the correct css rules to an element to give it the elevation specified by $zValue.
+ * The $zValue must be between 0 and 24.
+ */
+/**
+ * Returns a string that can be used as the value for a transition property for elevation.
+ * Calling this function directly is useful in situations where a component needs to transition
+ * more than one property.
+ *
+ * .foo {
+ *   transition: md-elevation-transition-property-value(), opacity 100ms ease;
+ *   will-change: $md-elevation-property, opacity;
+ * }
+ */
+/**
+ * Applies the correct css rules needed to have an element transition between elevations.
+ * This mixin should be applied to elements whose elevation values will change depending on their
+ * context (e.g. when active or disabled).
+ */
+button {
+  padding-left: 0;
+  padding-right: 0; }
+  button label {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px; }
+    button label md-icon {
+      position: relative;
+      top: 6px;
+      padding-right: 5px; }
+    button label input.md-file-upload-input {
+      display: none; }
+
+.td-file-cancel {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  top: 24px;
+  left: -12px; }
+  .td-file-cancel md-icon {
+    background-color: white;
+    border-radius: 12px; }
+
+/**
+* Class that is added ondragenter by the [TdFileDrop] directive.
+*/
+.drop-zone {
+  border-radius: 3px;
+  transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
+  .drop-zone * {
+    pointer-events: none; }
+
+/*# sourceMappingURL=file-upload.component.css.map */
