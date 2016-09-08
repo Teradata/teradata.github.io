@@ -17,7 +17,8 @@
     "webdriver-update": "bash ./node_modules/.bin/webdriver-manager update",
     "pretest": "rm -rf ./dist && ng build",
     "test": "karma start ./config/karma.conf.js",
-    "ghpages-deploy": "bash scripts/ghpages-deploy"
+    "ghpages-deploy": "bash scripts/ghpages-deploy",
+    "ghpages-public": "bash scripts/ghpages-public"
   },
   "engines": {
     "node": ">4.4 < 5",
