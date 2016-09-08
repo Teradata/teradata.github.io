@@ -19,9 +19,18 @@
       </template>
     </div>
   </div>
-  <div layout="row" layout-align="start center" layout-padding>
-    <span class="md-caption">Copyright &copy; 2016 Teradata. All rights reserved</span>
+  <md-divider></md-divider>
+  <div layout="row" layout-align="start center" layout-wrap layout-padding>
+    <span flex-xs="100" flex-gt-xs="45" layout="row" layout-align="start center" layout-align-xs="center center" layout-padding>
+      <a href="https://www.teradata.com/" target="_blank"><md-icon class="md-icon-logo tc-orange-700" svgSrc="assets/icons/teradata.svg"></md-icon></a>
+      <span class="md-caption push-left-sm">Copyright &copy; 2016 Teradata. All rights reserved</span>
+    </span>
     <span flex></span>
-    <md-icon class="md-icon-ux" svgSrc="assets/icons/teradata.svg"></md-icon>
+    <span flex-xs="100" flex-gt-xs="45" layout="row" layout-align="end center" layout-align-xs="center center" layout-padding>
+      <span class="md-caption">made with</span>
+      <md-icon class="push-left-xs push-right-xs">favorite</md-icon>
+      <span class="md-caption">using Covalent</span>
+      <a class="push-left-xs push-right-xs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon svgSrc="assets/icons/covalent.svg"></md-icon></a>
+    </span>
   </div>
 </td-layout-nav>
