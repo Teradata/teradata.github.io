@@ -1,0 +1,15 @@
+/*
+ * Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+ * TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+ */
+:host /deep/ {
+    mat-divider {
+        display: block;
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+    mat-toolbar {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        z-index: 1;
+    }
+}

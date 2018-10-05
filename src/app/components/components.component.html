@@ -1,0 +1,288 @@
+<!--
+  Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+  TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+-->
+<td-layout-nav logo="teradata" toolbarTitle="App Template" navigationRoute="/">
+  <button mat-icon-button td-menu-button tdLayoutToggle>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="start center" flex>
+    <span flex></span>
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button class="overflow-visible" mat-icon-button>
+      <td-notification-count color="accent" [notifications]="13">
+        <mat-icon>notifications</mat-icon>
+      </td-notification-count>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>help</mat-icon>
+    </button>
+  </div>
+  <div flex>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <div flex layout="row" layout-align="start center">
+          <mat-icon class="push-left-sm push-right">widgets</mat-icon>
+          <span class="push-left-xs">{{'COMPONENTS' | translate}}</span>
+          <span flex></span>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+      <ng-template tdLoading="components.loader">          
+        <div layout-gt-xs="row" layout-wrap>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>List</mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-list class="pad-left-xs pad-right-xs">
+                <ng-template let-system let-index="index" let-last="last" ngFor [ngForOf]="systems">
+                  <mat-list-item *ngIf="index < 5">
+                    <mat-icon matListIcon color="accent">dns</mat-icon>
+                    <h3 matLine>{{system.nickname}}</h3>
+                    <h4 matLine>{{system.host}}:{{system.port}}</h4>
+                    <p matLine>{{system.system_type}}</p>
+                  </mat-list-item>
+                  <mat-divider *ngIf="!last && index < 5"></mat-divider>
+                </ng-template>
+              </mat-list>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://material.angular.io/components/autocomplete/overview" target="_blank" color="accent" class="text-upper">{{'DOCS' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Grid List</mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-card-content>
+                <mat-grid-list cols="3" rowHeight="200px">
+                  <mat-grid-tile *ngFor="let product of products" ngClass="bgc-td-{{product.color}}">
+                    <mat-grid-tile-header>
+                      <mat-icon mat-grid-avatar>info_outline</mat-icon>
+                      {{product.name}}
+                    </mat-grid-tile-header>
+                    <mat-icon [style.width.px]="128" [style.height.px]="128" class="fill-white" [svgIcon]="product.icon"></mat-icon>
+                    <mat-grid-tile-footer>
+                      <h3 mat-line>{{product.name}}</h3>
+                      <span mat-line>{{product.description}}</span>
+                      <mat-icon>star_border</mat-icon>
+                    </mat-grid-tile-footer>
+                  </mat-grid-tile>
+                </mat-grid-list>
+              </mat-card-content>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://material.angular.io/components/list/overview" target="_blank" color="accent" class="text-upper">{{'DOCS' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Expansion Panels (Angular Material)</mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Personal data
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Type your name and age
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+              
+                  <mat-form-field>
+                    <input matInput placeholder="First name">
+                  </mat-form-field>
+              
+                  <mat-form-field>
+                    <input matInput placeholder="Age">
+                  </mat-form-field>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://material.angular.io/components/expansion/overview" target="_blank" color="accent" class="text-upper">{{'DOCS'
+                  | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Expansion Panels (Covalent)</mat-card-title>
+              <mat-divider></mat-divider>
+              <td-expansion-panel label="Label goes here" sublabel="sublabel goes here" [disabled]="disabled">
+                <div class="md-padding">
+                  <h3 class="mat-subheading-2">md-padding class</h3>
+                  <div>Demo 1</div>
+                  <div>Demo 2</div>
+                  <div>Demo 3</div>
+                  <div>Demo 4</div>
+                </div>
+              </td-expansion-panel>
+              <td-expansion-panel label="Another label goes here" sublabel="Another sublabel goes here" [disabled]="disabled">
+                <div class="md-padding">
+                  <h3 class="mat-subheading-2">md-padding class</h3>
+                  <div>Demo 5</div>
+                  <div>Demo 6</div>
+                  <div>Demo 7</div>
+                  <div>Demo 8</div>
+                </div>
+              </td-expansion-panel>
+              <mat-card-actions>
+                <button mat-button href="https://teradata.github.io/covalent/#/components/expansion-panel" target="_blank" color="accent" class="text-upper">{{'DOCS'
+                  | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Stepper (Angular Material)</mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-vertical-stepper #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <div>
+                      <button mat-button matStepperPrevious>Back</button>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step>
+                  <ng-template matStepLabel>Done</ng-template>
+                  You are now done.
+                  <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                  </div>
+                </mat-step>
+              </mat-vertical-stepper>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://material.angular.io/components/stepper/overview" target="_blank" color="accent"
+                  class="text-upper">{{'DOCS' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Stepper (Covalent)</mat-card-title>
+              <mat-divider></mat-divider>
+              <td-steps>
+                <td-step #step1 label="Basic Usage" sublabel="Toggle between active and inactive and emit events." [active]="true" [disabled]="disabled"
+                  (activated)="activeStep1Event()" (deactivated)="deactiveStep1Event()">
+                  <ng-template td-step-label><span>Basic Usage (template)</span></ng-template>
+                  Include any content you like for an active stepper
+                </td-step>
+                <td-step #step2 label="Required State" sublabel="Toggle between active and inactive while in required state and disable ripple."
+                  [state]="stateStep2" [disabled]="disabled" disableRipple>
+                  This step is required!
+                  <ng-template td-step-actions>
+                    <button mat-raised-button color="primary" (click)="toggleRequiredStep2()" class="text-upper">Toggle Require</button>
+                    <button mat-button (click)="step2.active = false" class="text-upper">Cancel</button>
+                  </ng-template>
+                </td-step>
+                <td-step #step3 label="Complete State" sublabel="Toggle between active and inactive while in complete state." [state]="stateStep3"
+                  [disabled]="disabled">
+                  Mark this step complete and get a summary
+                  <ng-template td-step-summary>
+                    Use an optional step summary to summarize the info in this step
+                  </ng-template>
+                  <ng-template td-step-actions>
+                    <button mat-raised-button color="primary" (click)="toggleCompleteStep3()" class="text-upper">Toggle Complete</button>
+                    <button mat-button (click)="step3.active = false" class="text-upper">Cancel</button>
+                  </ng-template>
+                </td-step>
+              </td-steps>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://teradata.github.io/covalent/#/components/stepper" target="_blank" color="accent"
+                  class="text-upper">{{'DOCS' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Tabs</mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-tab-group [color]="warn">
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    <div layout="row" layout-align="center center">
+                      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                      <span>First</span>
+                    </div>
+                  </ng-template>
+                  <div class="pad">
+                    Tab with custom template for tab label
+                  </div>
+                </mat-tab>
+                <mat-tab label="Second">
+                  <div class="pad">
+                    Regular tab
+                  </div>
+                </mat-tab>
+                <mat-tab label="Third">
+                  <div class="pad">
+                    Another regular tab
+                  </div>
+                </mat-tab>
+              </mat-tab-group>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://material.angular.io/components/tabs/overview" target="_blank" color="accent" class="text-upper">{{'DOCS'
+                  | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div flex-gt-xs="50">
+            <mat-card>
+              <mat-card-title>Chips &amp; Autocomplete with Avatars</mat-card-title>
+              <mat-divider></mat-divider>
+              <td-chips [items]="chips">
+                <ng-template td-chip let-chip="chip">
+                  <div class="tc-grey-100 bgc-accent" td-chip-avatar>{{chip.substring(0, 1).toUpperCase()}}</div> {{chip}}
+                </ng-template>
+              </td-chips>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button href="https://teradata.github.io/covalent/#/components/chips" target="_blank" color="accent" class="text-upper">{{'DOCS'
+                  | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</td-layout-nav>

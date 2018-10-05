@@ -1,0 +1,30 @@
+{
+  "/api/app": {
+    "target": "https://appcenter.ps.ac.uda.io/api/app",
+    "secure": false,
+    "pathRewrite": {"^/api/app" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api/user": {
+    "target": "https://appcenter.ps.ac.uda.io/api/user",
+    "secure": false,
+    "pathRewrite": {"^/api/user" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api/system": {
+    "target": "https://appcenter.ps.ac.uda.io/api/system",
+    "secure": false,
+    "pathRewrite": {"^/api/system" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/api/query": {
+    "target": "https://appcenter.ps.ac.uda.io/api/query",
+    "secure": false,
+    "pathRewrite": {"^/api/query" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

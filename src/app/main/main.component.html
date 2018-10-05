@@ -1,12 +1,34 @@
-<td-layout #layout title="Open Source" logo="assets/icons/teradata.svg">
-  <md-nav-list menu-items>
-    <template let-item let-last="last" ngFor [ngForOf]="routes">
-      <a md-list-item target="_blank" href="{{item.link}}" (click)="layout.close()">
-        <md-icon *ngIf="item.icon">{{item.icon}}</md-icon>
-        <md-icon *ngIf="item.src" svgSrc="{{item.src}}"></md-icon>
-        {{item.title}}
+<!--
+  Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+  TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+-->
+
+<td-layout #layout [class]="activeTheme">
+  <td-navigation-drawer flex [logo]="activeTheme === 'dark-theme' ? 'teradata' : 'teradata-dark'" [sidenavTitle]="'APP_TITLE' | translate" [name]="user?.display_name" [email]="user?.email">
+    <mat-nav-list>
+      <ng-template let-item let-last="last" ngFor [ngForOf]="routes">
+        <a mat-list-item [routerLink]="[item.route]" (click)="layout.close()">
+          <mat-icon matListIcon>{{item.icon}}</mat-icon>
+          {{item.title | translate}}
+        </a>
+      </ng-template>
+      <a mat-list-item href="http://getcovalent.com" target="_blank" (click)="layout.close()">
+        <mat-icon matListIcon svgIcon="covalent-mark"></mat-icon>
+        <span flex>{{'COVALENT_DOCS' | translate}}</span>
+        <mat-icon title="External link">launch</mat-icon>
       </a>
-    </template>
-  </md-nav-list>
+    </mat-nav-list>
+    <mat-nav-list td-navigation-drawer-menu>
+      <a mat-list-item (click)="theme('default-theme')" *ngIf="activeTheme === 'dark-theme'">
+        <mat-icon matListIcon>brightness_high</mat-icon>
+        {{'LIGHT_MODE' | translate }}</a>
+      <a mat-list-item (click)="theme('dark-theme')" *ngIf="activeTheme != 'dark-theme'">
+        <mat-icon matListIcon>brightness_low</mat-icon>{{'DARK_MODE' | translate }}</a>
+      <a mat-list-item (click)="logout()"><mat-icon matListIcon>exit_to_app</mat-icon>{{'SIGN_OUT' | translate }}</a>
+    </mat-nav-list>
+  </td-navigation-drawer>
+  <div td-sidenav-content class="td-layout-footer pad">
+    <span class="mat-caption tc-grey-500">{{'COPYRIGHT' | translate: { year: year} }}</span>
+  </div>
   <router-outlet></router-outlet>
 </td-layout>

@@ -1,1 +1,0 @@
-{"version":3,"file":"platform/chips/chip.component.css","sources":["platform/chips/chip.component.scss"],"sourcesContent":[":host {\r\n  display: block;\r\n  float: left;\r\n}\r\n"],"mappings":"AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,KAAM;EACf,KAAK,EAAE,IAAK,GACb","names":[],"sourceRoot":"/source/"}

@@ -1,0 +1,7 @@
+var appConfig = {
+  APP_CENTER_SERVICES_URL: '/api/app',
+  USERS_SERVICES_URL: '/api/user',
+  DICTIONARY_SERVICES_URL: '/api/dictionary',
+  SYSTEM_SERVICES_URL: '/api/system',
+  QUERY_SERVICES_URL: '/api/query',
+};

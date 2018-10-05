@@ -1,0 +1,700 @@
+<!--
+  Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+  TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+-->
+<td-layout-nav logo="teradata" toolbarTitle="App Template" navigationRoute="/">
+  <button mat-icon-button td-menu-button tdLayoutToggle>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="start center" flex>
+    <span flex></span>
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button class="overflow-visible" mat-icon-button>
+      <td-notification-count color="accent" [notifications]="13">
+        <mat-icon>notifications</mat-icon>
+      </td-notification-count>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>help</mat-icon>
+    </button>
+  </div>
+  <div flex>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <div flex layout="row" layout-align="start center">
+          <mat-icon class="push-left-sm push-right">palette</mat-icon>
+          <span class="push-left-xs">{{'TERADATA_BRAND' | translate}}</span>
+          <span flex></span>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  <div tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+    <div layout-gt-xs="row" layout-wrap>
+      <div flex-gt-xs="100">
+        <mat-card>
+          <mat-card-title>Teradata Branding</mat-card-title>
+          <mat-card-subtitle>follow these usages of the new logo, font &amp; colors</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <div class="mat-display-1 push-bottom-none">Components of the logo</div>
+            <p>Modern, bold and conveying stability, the new Teradata logo consists of two components: a wordmark, followed by a period.
+              The wordmark incorporates customized typographic elements implying connectivity and flow. The period is an essential
+              component of the mark that speaks to the definitive and conclusive nature of the Teradata brand.</p>
+            <div class="mat-headline push-bottom-sm">Preferred usage</div>
+            <div layout="row" layout-wrap>
+              <div flex-xs="50" flex-gt-xs="25" layout="row" layout-align="center center" class="pad text-center">
+                <div>
+                  <div class="pad bgc-td-slate tc-white">
+                    <mat-icon svgIcon="teradata" style="height:auto;width:100%"></mat-icon>
+                    <div class="mat-subheading-1">Two color default</div>
+                  </div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                      <mat-icon svgIcon="teradata"></mat-icon>
+                    ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div flex-xs="50" flex-gt-xs="25" layout="row" layout-align="center center" class="pad text-center">
+                <div>
+                  <div class="pad">
+                    <mat-icon svgIcon="teradata-dark" style="height:auto;width:100%"></mat-icon>
+                    <div class="mat-subheading-1">Two color dark</div>
+                  </div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                      <mat-icon svgIcon="teradata-dark"></mat-icon>
+                    ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div flex-xs="50" flex-gt-xs="25" layout="row" layout-align="center center" class="pad text-center">
+                <div>
+                  <div class="pad bgc-td-orange tc-white">
+                    <mat-icon svgIcon="teradata-solid" style="color:white;height:auto;width:100%"></mat-icon>
+                    <div class="mat-subheading-1">One color white</div>
+                  </div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                      <mat-icon svgIcon="teradata-solid" [style.color]="'white'"></mat-icon>
+                    ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div flex-xs="50" flex-gt-xs="25" layout="row" layout-align="center center" class="pad text-center">
+                <div>
+                  <div class="pad">
+                    <mat-icon svgIcon="teradata-solid" style="color:black;height:auto;width:100%"></mat-icon>
+                    <div class="mat-subheading-1">One color black</div>
+                  </div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                      <mat-icon svgIcon="teradata-solid" [style.color]="'black'"></mat-icon>
+                    ]]>
+                  </td-highlight>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div flex-gt-xs="50">
+        <mat-card>
+          <mat-card-title>Teradata Typeface</mat-card-title>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <div class="mat-display-1 push-top push-bottom-none">Primary Typeface: Ridley Grotesk</div>
+            <p>
+              The new Teradata brand typeface is Ridley Grotesk, an open, approachable, modern sans serif with a full range of weights.
+            </p>
+            <p>
+              Ridley Grotesk should be used in all design materials, marketing communications, external advertising and on the web.
+            </p>
+            <div class="mat-subheading-1">Headings use Ridley Grotesk (font must be included in build):</div>
+            <div class="mat-display-3 push-bottom-none">Heading 1</div>
+            <td-highlight lang="html" class="text-left">
+              <![CDATA[
+                    <h1>Heading 1</h1>
+                    or
+                    <div class="mat-display-3">Heading 1</div>
+                  ]]>
+            </td-highlight>
+            <div class="mat-display-2 push-top push-bottom-none">Heading 2</div>
+            <td-highlight lang="html" class="text-left">
+              <![CDATA[
+                    <h2>Heading 2</h2>
+                    or
+                    <div class="mat-display-2">Heading 2</div>
+                  ]]>
+            </td-highlight>
+            <div class="mat-display-1 push-top push-bottom-none">Heading 3</div>
+            <td-highlight lang="html" class="text-left">
+              <![CDATA[
+                    <h3>Heading 3</h3>
+                    or
+                    <div class="mat-display-1">Heading 3</div>
+                  ]]>
+            </td-highlight>
+            <mat-divider class="relative"></mat-divider>
+            <div class="mat-display-1 push-top push-bottom-none">Secondary Typeface: Arial</div>
+            <p>
+              For compatibility, any internal documents that may be edited externally should use our secondary typeface, Arial.
+            </p>
+            <div class="mat-headline push-top push-bottom-none">Further guidance</div>
+            <p>
+  This addendum is meant as an initial introduction to our use of type. Further guidance and specific examples of usage will
+  be included in the Teradata brand guidelines.
+            </p>
+            <div class="mat-display-1 push-top push-bottom-none">Additional typography</div>
+            <p>These Material Design classes also use the Ridley Grotesk font:</p>
+            <div class="mat-headline">.mat-headline</div>
+            <div class="mat-subheading-1">.mat-subheading-1</div>
+            <div class="mat-subheading-2">.mat-subheading-2</div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card>
+          <mat-card-title>State Colors</mat-card-title>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <p>
+              Now that we have a custom Angular Material palette for the Teradata brand, we use standard Material Design colors for state across all products and apps. 
+            </p>
+            <p class="mat-subheading-1 push-none">Type colors</p>
+            <div class="tc-positive pad-xs">Positive - tc-positive</div>
+            <div class="tc-caution pad-xs">Caution - tc-caution</div>
+            <div class="tc-negative pad-xs">Negative - tc-negative</div>
+            <div class="tc-neutral pad-xs">Neutral - tc-neutral</div>
+            <div class="tc-emphasis-1 pad-xs">Emphasis 1 - tc-emphasis-1</div>
+            <div class="tc-emphasis-2 pad-xs">Emphasis 2 - tc-emphasis-2</div>
+            <td-highlight lang="html" class="text-left">
+              <![CDATA[
+                <div class="tc-positive pad-xs">Positive - tc-positive</div>
+                <div class="tc-caution pad-xs">Caution - tc-caution</div>
+                <div class="tc-negative pad-xs">Negative - tc-negative</div>
+                <div class="tc-neutral pad-xs">Neutral - tc-neutral</div>
+                <div class="tc-emphasis-1 pad-xs">Emphasis 1 - tc-emphasis-1</div>
+                <div class="tc-emphasis-2 pad-xs">Emphasis 2 - tc-emphasis-2</div>
+              ]]>
+            </td-highlight>
+            <mat-divider class="relative push-top push-bottom"></mat-divider>
+            <p class="mat-subheading-1 push-none">Background colors</p>
+            <div class="bgc-positive pad-sm push-bottom-xs">Positive - bgc-positive</div>
+            <div class="bgc-caution pad-sm push-bottom-xs">Caution - bgc-caution</div>
+            <div class="bgc-negative pad-sm push-bottom-xs">Negative - bgc-negative</div>
+            <div class="bgc-neutral pad-sm push-bottom-xs">Neutral - bgc-neutral</div>
+            <div class="bgc-emphasis-1 pad-sm push-bottom-xs">Emphasis 1 - bgc-emphasis-1</div>
+            <div class="bgc-emphasis-2 pad-sm push-bottom-xs">Emphasis 2 - bgc-emphasis-2</div>
+            <td-highlight lang="html" class="text-left" [style.max-height.px]="200">
+              <![CDATA[
+                <div class="bgc-positive pad-sm push-bottom-xs">Positive - bgc-positive</div>
+                <div class="bgc-caution pad-sm push-bottom-xs">Caution - bgc-caution</div>
+                <div class="bgc-negative pad-sm push-bottom-xs">Negative - bgc-negative</div>
+                <div class="bgc-neutral pad-sm push-bottom-xs">Neutral - bgc-neutral</div>
+                <div class="bgc-emphasis-1 pad-sm push-bottom-xs">Emphasis 1 - bgc-emphasis-1</div>
+                <div class="bgc-emphasis-2 pad-sm push-bottom-xs">Emphasis 2 - bgc-emphasis-2</div>
+              ]]>
+            </td-highlight>
+            <mat-divider class="relative push-top push-bottom"></mat-divider>
+            <p class="mat-subheading-1 push-none">Lists</p>
+            <mat-list>
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-positive">check</mat-icon>
+                <p matLine class="tc-positive">Positive list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-caution">warning</mat-icon>
+                <p matLine class="tc-caution">Caution list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-negative">error</mat-icon>
+                <p matLine class="tc-negative">Negative list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+            <mat-list class="push-top">
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-neutral">ac_unit</mat-icon>
+                <p matLine class="tc-neutral">Neutral list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-emphasis-1">directions_boat</mat-icon>
+                <p matLine class="tc-emphasis-1">Emphasis 1 list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon matListIcon class="tc-emphasis-2">local_activity</mat-icon>
+                <p matLine class="tc-emphasis-2">Emphasis 2 list item</p>
+                <mat-divider [inset]="true"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+            <td-highlight lang="html" class="text-left" [style.max-height.px]="200">
+              <![CDATA[
+                <mat-list>
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-positive">check</mat-icon>
+                    <p matLine class="tc-positive">Positive list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-caution">warning</mat-icon>
+                    <p matLine class="tc-caution">Caution list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-negative">error</mat-icon>
+                    <p matLine class="tc-negative">Negative list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                </mat-list>
+                <mat-list class="push-top">
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-neutral">ac_unit</mat-icon>
+                    <p matLine class="tc-neutral">Neutral list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-emphasis-1">directions_boat</mat-icon>
+                    <p matLine class="tc-emphasis-1">Emphasis 1 list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon matListIcon class="tc-emphasis-2">local_activity</mat-icon>
+                    <p matLine class="tc-emphasis-2">Emphasis 2 list item</p>
+                    <mat-divider [inset]="true"></mat-divider>
+                  </mat-list-item>
+                </mat-list>
+              ]]>
+            </td-highlight>
+            <mat-divider class="relative push-top push-bottom"></mat-divider>
+            <p class="mat-subheading-1 push-none">Backgrounds</p>
+            <div layout-gt-xs="row">
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-positive push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Positive</div>
+                  <div class="mat-body-1">Result</div>
+                </div>
+                <mat-icon class="text-30">check</mat-icon>
+              </div>
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-caution push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Caution</div>
+                  <div class="mat-body-1">Result</div>
+                </div>
+                <mat-icon class="text-30">warning</mat-icon>
+              </div>
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-negative push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Negative</div>
+                  <div class="mat-body-1">Result</div>
+                </div>
+                <mat-icon class="text-30">error</mat-icon>
+              </div>
+            </div>
+            <p class="mat-subheading-1 push-none">Other backgrounds</p>
+            <div layout-gt-xs="row">
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-neutral push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Neutral</div>
+                  <div class="mat-body-1">Miscellaneous</div>
+                </div>
+                <mat-icon class="text-30">ac_unit</mat-icon>
+              </div>
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-emphasis-1 push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Emphasis 1</div>
+                  <div class="mat-body-1">Miscellaneous</div>
+                </div>
+                <mat-icon class="text-30">directions_boat</mat-icon>
+              </div>
+              <div flex-gt-xs layout="row" layout-align="start center" class="bgc-emphasis-2 push-sm pad">
+                <div flex>
+                  <div class="mat-title push-none">Emphasis 2</div>
+                  <div class="mat-body-1">Miscellaneous</div>
+                </div>
+                <mat-icon class="text-30">local_activity</mat-icon>
+              </div>
+            </div>
+            <td-highlight lang="html" class="text-left" [style.max-height.px]="200">
+              <![CDATA[
+                <p class="mat-subheading-1 push-none">Backgrounds</p>
+                <div layout-gt-xs="row">
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-positive push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Positive</div>
+                      <div class="mat-body-1">Result</div>
+                    </div>
+                    <mat-icon class="text-30">check</mat-icon>
+                  </div>
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-caution push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Caution</div>
+                      <div class="mat-body-1">Result</div>
+                    </div>
+                    <mat-icon class="text-30">warning</mat-icon>
+                  </div>
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-negative push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Negative</div>
+                      <div class="mat-body-1">Result</div>
+                    </div>
+                    <mat-icon class="text-30">error</mat-icon>
+                  </div>
+                </div>
+                <p class="mat-subheading-1 push-none">Other backgrounds</p>
+                <div layout-gt-xs="row">
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-neutral push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Neutral</div>
+                      <div class="mat-body-1">Miscellaneous</div>
+                    </div>
+                    <mat-icon class="text-30">ac_unit</mat-icon>
+                  </div>
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-emphasis-1 push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Emphasis 1</div>
+                      <div class="mat-body-1">Miscellaneous</div>
+                    </div>
+                    <mat-icon class="text-30">directions_boat</mat-icon>
+                  </div>
+                  <div flex-gt-xs layout="row" layout-align="start center" class="bgc-emphasis-2 push-sm pad">
+                    <div flex>
+                      <div class="mat-title push-none">Emphasis 2</div>
+                      <div class="mat-body-1">Miscellaneous</div>
+                    </div>
+                    <mat-icon class="text-30">local_activity</mat-icon>
+                  </div>
+                </div>
+              ]]>
+            </td-highlight>
+            <mat-divider class="relative push-top push-bottom"></mat-divider>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div flex-gt-xs="50">
+        <mat-card>
+          <mat-card-title>Teradata Color Palettes</mat-card-title>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <div class="mat-display-1 push-top push-bottom-none">Core palette</div>
+            <p>For the brand redesign, we’ve evolved the core colors to create a palette that is vibrant and modern, without
+              sacrificing stability. Colors may be screened for added tonal variation. Tints shown are at 80%, 60%, 40% and
+              20%, but others may be used where appropriate.</p>
+            <div layout="row">
+              <div layout="column" class="push">
+                <div class="pad-lg bgc-td-slate"></div>
+                <div layout="row">
+                  <div class="pad-md bgc-td-slate-600"></div>
+                  <div class="pad-md bgc-td-slate-400"></div>
+                  <div class="pad-md bgc-td-slate-200"></div>
+                  <div class="pad-md bgc-td-slate-50"></div>
+                </div>
+                <div class="mat-caption">
+                  <div>slate</div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                      .bgc-td-slate
+                      .bgc-td-slate-600
+                      .bgc-td-slate-400
+                      .bgc-td-slate-200
+                      .bgc-td-slate-50
+                    ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div layout="column" class="push">
+                <div class="pad-lg bgc-td-orange"></div>
+                <div layout="row">
+                  <div class="pad-md bgc-td-orange-600"></div>
+                  <div class="pad-md bgc-td-orange-400"></div>
+                  <div class="pad-md bgc-td-orange-200"></div>
+                  <div class="pad-md bgc-td-orange-50"></div>
+                </div>
+                <div class="mat-caption">
+                  <div>orange</div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                          .bgc-td-orange
+                          .bgc-td-orange-600
+                          .bgc-td-orange-400
+                          .bgc-td-orange-200
+                          .bgc-td-orange-50
+                        ]]>
+                  </td-highlight>
+                </div>
+              </div>
+            </div>
+            <div class="mat-display-1 push-top push-bottom-none">Supplemental palette</div>
+            <p>In addition to evolving the core colors, we’ve added a supplemental color palette for added flexibility in specialized
+              design situations.
+            </p>
+            <p>Supplemental colors should be used sparingly and only when necessary. For example, certain UI (user interfaces)
+              with a need for multiple distinguishing colors, or specific campaign materials.</p>
+            <div layout="row" layout-wrap>
+              <div layout="column" class="push">
+                <div class="pad-lg bgc-td-yellow"></div>
+                <div layout="row">
+                  <div class="pad-md bgc-td-yellow-600"></div>
+                  <div class="pad-md bgc-td-yellow-400"></div>
+                  <div class="pad-md bgc-td-yellow-200"></div>
+                  <div class="pad-md bgc-td-yellow-50"></div>
+                </div>
+                <div class="mat-caption">
+                  <div>yellow</div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                          .bgc-td-yellow
+                          .bgc-td-yellow-600
+                          .bgc-td-yellow-400
+                          .bgc-td-yellow-200
+                          .bgc-td-yellow-50
+                        ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div layout="column" class="push">
+                <div class="pad-lg bgc-td-teal"></div>
+                <div layout="row">
+                  <div class="pad-md bgc-td-teal-600"></div>
+                  <div class="pad-md bgc-td-teal-400"></div>
+                  <div class="pad-md bgc-td-teal-200"></div>
+                  <div class="pad-md bgc-td-teal-50"></div>
+                </div>
+                <div class="mat-caption">
+                  <div>teal</div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                          .bgc-td-teal
+                          .bgc-td-teal-600
+                          .bgc-td-teal-400
+                          .bgc-td-teal-200
+                          .bgc-td-teal-50
+                        ]]>
+                  </td-highlight>
+                </div>
+              </div>
+              <div layout="column" class="push">
+                <div class="pad-lg bgc-td-blue"></div>
+                <div layout="row">
+                  <div class="pad-md bgc-td-blue-600"></div>
+                  <div class="pad-md bgc-td-blue-400"></div>
+                  <div class="pad-md bgc-td-blue-200"></div>
+                  <div class="pad-md bgc-td-blue-50"></div>
+                </div>
+                <div class="mat-caption">
+                  <div>blue</div>
+                  <td-highlight lang="html" class="text-left">
+                    <![CDATA[
+                          .bgc-td-blue
+                          .bgc-td-blue-600
+                          .bgc-td-blue-400
+                          .bgc-td-blue-200
+                          .bgc-td-blue-50
+                        ]]>
+                  </td-highlight>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card>
+          <mat-card-content>
+            <mat-card-title>UI Color Schemes</mat-card-title>
+            <h2>Console Color Scheme</h2>
+            <p>Core consoles &amp; products (such as IntelliCloud Management Console, Control Center, Server Management) color palette is Slate &amp; Orange:</p>
+            <mat-card>
+              <mat-toolbar color="primary" style="border-top: 2px solid #F2724B">
+                <mat-toolbar-row>
+                  <mat-icon class="mat-icon-logo" svgIcon="teradata"></mat-icon>
+                  <span flex>Consoles</span>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-toolbar>
+                <mat-toolbar-row>
+                  <span flex>Dashboard</span>
+                  <button mat-raised-button color="accent">CREATE</button>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-list dense>
+                <mat-list-item>
+                  <mat-icon color="primary">label</mat-icon>
+                  Primary: Teradata Slate (700 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="accent">label</mat-icon>
+                  Accent: Teradata Orange (800 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="warn">label</mat-icon>
+                  Warn: Material Design Deep Orange (800 hue)
+                </mat-list-item>
+              </mat-list>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button color="accent" class="text-upper">Button</button>
+                <button mat-button class="text-upper">Button</button>
+              </mat-card-actions>
+            </mat-card>
+            <td-highlight lang="scss" class="text-left">
+              <![CDATA[
+                $primary: mat-palette($td-slate, 700, 100, 900);
+                $accent:  mat-palette($td-orange, 800, 100, 900);
+                $warn:    mat-palette($mat-deep-orange, 800, 100, 900);
+              ]]>
+            </td-highlight>
+            <mat-divider class="push-top-md push-bottom-md relative"></mat-divider>
+            <h2>Apps & Field Solution Color Scheme</h2>
+            <p>Non-core products & field solutions (such as AppCenter apps, Customer Journey & CIM/RTIM) color palette
+              is Slate &amp; Teal:</p>
+            <mat-card class="app-theme">
+              <mat-toolbar color="primary" style="border-top: 2px solid #0FB4B1">
+                <mat-toolbar-row>
+                  <mat-icon class="mat-icon-logo" svgIcon="teradata"></mat-icon>
+                  <span flex>Apps &amp; Solutions</span>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-toolbar>
+                <mat-toolbar-row>
+                  <span flex>Dashboard</span>
+                  <button mat-raised-button color="accent">CREATE</button>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-list dense class="app-theme">
+                <mat-list-item>
+                  <mat-icon color="primary">label</mat-icon>
+                  Primary: Teradata Slate (700 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="accent">label</mat-icon>
+                  Accent: Teradata Teal (800 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="warn">label</mat-icon>
+                  Warn: Material Design Deep Orange (800 hue)
+                </mat-list-item>
+              </mat-list>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button color="accent" class="text-upper">Button</button>
+                <button mat-button class="text-upper">Button</button>
+              </mat-card-actions>
+            </mat-card>
+            <td-highlight lang="scss" class="text-left">
+              <![CDATA[
+                $primary: mat-palette($td-slate, 700, 100, 900);
+                $accent:  mat-palette($td-teal, 800, 100, 900);
+                $warn:    mat-palette($mat-deep-orange, 800, 100, 900);
+              ]]>
+            </td-highlight>
+            <mat-divider class="push-top-md push-bottom-md relative"></mat-divider>
+            <h2>Analytics &amp; Monitoring Color Scheme</h2>
+            <p>Analytics &amp; Monitoring products (such as Viewpoint, Unity System Monitoring &amp; Workload Analytics) color palette is Slate &amp;
+              Teal:</p>
+            <mat-card class="analytics-theme">
+              <mat-toolbar color="primary" style="border-top: 2px solid #1B98C6">
+                <mat-toolbar-row>
+                  <mat-icon class="mat-icon-logo" svgIcon="teradata"></mat-icon>
+                  <span flex>Analytics &amp; Monitoring</span>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-toolbar>
+                <mat-toolbar-row>
+                  <span flex>Dashboard</span>
+                  <button mat-raised-button color="accent">CREATE</button>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-list dense class="analytics-theme">
+                <mat-list-item>
+                  <mat-icon color="primary">label</mat-icon>
+                  Primary: Teradata Slate (700 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="accent">label</mat-icon>
+                  Accent: Teradata Blue (800 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="warn">label</mat-icon>
+                  Warn: Material Design Deep Orange (800 hue)
+                </mat-list-item>
+              </mat-list>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button color="accent" class="text-upper">Button</button>
+                <button mat-button class="text-upper">Button</button>
+              </mat-card-actions>
+            </mat-card>
+            <td-highlight lang="scss" class="text-left">
+              <![CDATA[
+                $primary: mat-palette($td-slate, 700, 100, 900);
+                $accent:  mat-palette($td-blue, 800, 100, 900);
+                $warn:    mat-palette($mat-deep-orange, 800, 100, 900);
+              ]]>
+            </td-highlight>
+            <mat-divider class="push-top-md push-bottom-md relative"></mat-divider>
+            <td-message label="Info" sublabel="This is a special theme for websites" color="accent" icon="info"></td-message>
+            <h2>Website Color Scheme</h2>
+            <p>Public websites (such as the Teradata.com homepage, Docs site, Access site and other subsites) color
+              palette is Slate &amp; Orange, but with a white toolbar:</p>
+            <mat-card>
+              <mat-toolbar color="white" style="border-top: 2px solid #F2724B">
+                <mat-toolbar-row>
+                  <mat-icon class="mat-icon-logo" svgIcon="teradata-dark"></mat-icon>
+                  <span flex>Website</span>
+                </mat-toolbar-row>
+              </mat-toolbar>
+              <mat-list dense>
+                <mat-list-item>
+                  <mat-icon class="tc-grey-100">label</mat-icon>
+                  Toolbar: color="white"
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="primary">label</mat-icon>
+                  Primary: Teradata Slate (700 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="accent">label</mat-icon>
+                  Accent: Teradata Orange (800 hue)
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                  <mat-icon color="warn">label</mat-icon>
+                  Warn: Material Design Deep Orange (800 hue)
+                </mat-list-item>
+              </mat-list>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button color="accent" class="text-upper">Button</button>
+                <button mat-button class="text-upper">Button</button>
+              </mat-card-actions>
+            </mat-card>
+            <td-highlight lang="html" class="text-left">
+              <![CDATA[
+                <td-layout-nav color="white" logo="teradata-dark" toolbarTitle="Website">
+              ]]>
+            </td-highlight>
+            <td-highlight lang="scss" class="text-left">
+              <![CDATA[
+                $primary: mat-palette($td-slate, 700, 100, 900);
+                $accent:  mat-palette($td-orange, 800, 100, 900);
+                $warn:    mat-palette($mat-deep-orange, 800, 100, 900);
+              ]]>
+            </td-highlight>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+</td-layout-nav>

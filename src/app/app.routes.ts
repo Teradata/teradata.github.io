@@ -1,18 +1,21 @@
-import { provideRouter, RouterConfig, Route } from '@angular/router';
+/*
+ * Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+ * TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+ */
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { MainComponent } from './main/main.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-export const routes: RouterConfig = [
-  {path: '', component: MainComponent, children: [{
-      component: HomeComponent,
-      path: '',
+const routes: Routes = [
+    {
+        path: '', component: MainComponent, children: [
+            { path: '', component: DashboardComponent },
+        ],
     },
-    {path: 'about', component: AboutComponent},
-  ]},
+    { path: '**', redirectTo: '/' },
 ];
 
-export const APP_ROUTER_PROVIDERS: Route[] = [
-  provideRouter(routes),
-];
+export const appRoutes: any = RouterModule.forRoot(routes);

@@ -1,0 +1,72 @@
+<!--
+  Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+  TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+-->
+<td-layout-nav logo="teradata" [toolbarTitle]="'APP_TITLE' | translate">
+  <button mat-icon-button td-menu-button tdLayoutToggle>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="start center" flex>
+    <span flex></span>
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button class="overflow-visible" mat-icon-button>
+      <td-notification-count color="accent" [notifications]="13">
+        <mat-icon>notifications</mat-icon>
+      </td-notification-count>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>help</mat-icon>
+    </button>
+  </div>
+  <div flex>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <div flex layout="row" layout-align="start center">
+          <mat-icon class="push-left-sm push-right">dashboard</mat-icon>
+          <span class="push-left-xs">{{'DASHBOARD' | translate}}</span>
+          <span flex></span>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+      <ng-template tdLoading="overview.dashboard">
+        <div layout-gt-xs="row" layout-wrap>
+          <div flex-gt-xs="100">
+            <mat-card>
+              <mat-card-title>Teradata Branding</mat-card-title>
+              <mat-card-subtitle>follow these usages of the new logo, font &amp; colors</mat-card-subtitle>
+              <mat-divider></mat-divider>
+              <mat-card-content>
+                
+              </mat-card-content>
+              <mat-divider></mat-divider>
+              <mat-card-actions>
+                <button mat-button [routerLink]="[('/brand')]" color="accent" class="text-upper">{{'VIEW_MORE' | translate}}</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div layout-gt-xs="row" layout-wrap>
+          <ng-template let-item let-last="last" ngFor [ngForOf]="items">
+            <a href="{{item.link}}" class="mat-card-link" target="_blank" flex-md="50" flex-gt-md="25" layout="column">
+              <mat-card href class="mat-card-colored" flex>
+                <mat-toolbar class="bgc-{{item.color}}" layout="column" layout-align="center center" layout-padding>
+                  <mat-icon *ngIf="item.icon" class="mat-icon-font-xl tc-white">{{item.icon}}</mat-icon>
+                  <mat-icon *ngIf="item.src" class="mat-icon-src" svgIcon="{{item.src}}"></mat-icon>
+                </mat-toolbar>
+                <mat-card-content>
+                  <div layout="column" layout-padding>
+                    <div class="mat-subhead">{{item.title}}</div>
+                    <div class="mat-caption tc-grey-600"> {{item.description}} </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </a>
+          </ng-template>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</td-layout-nav>

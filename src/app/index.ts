@@ -1,2 +1,6 @@
-export {environment} from './environment';
-export {AppComponent} from './app.component';
+/*
+ * Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+ * TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+ */
+
+export {AppModule} from './app.module';

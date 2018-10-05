@@ -1,0 +1,104 @@
+<!--
+  Copyright (C) 2016-2017 by Teradata Corporation. All rights reserved.
+  TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+-->
+<td-layout-nav logo="teradata" toolbarTitle="App Template" navigationRoute="/">
+  <button mat-icon-button td-menu-button tdLayoutToggle>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div td-toolbar-content layout="row" layout-align="start center" flex>
+    <span flex></span>
+    <button mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+    <button class="overflow-visible" mat-icon-button>
+      <td-notification-count color="accent" [notifications]="13">
+        <mat-icon>notifications</mat-icon>
+      </td-notification-count>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>help</mat-icon>
+    </button>
+  </div>
+  <td-layout-manage-list [opened]="media.registerQuery('gt-sm') | async" [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '257px' : '100%'">
+    <mat-toolbar td-sidenav-content>
+      <mat-icon class="push-left-sm push-right">dns</mat-icon>
+      <span class="push-left-xs">{{'SYSTEMS' | translate}}</span>
+    </mat-toolbar>
+    <mat-nav-list td-sidenav-content [tdLayoutManageListClose]="!media.query('gt-xs')">
+      <ng-template let-item let-index="index" let-last="last" ngFor [ngForOf]="types">
+        <a mat-list-item [class.active]="index === 1">
+          <mat-icon *ngIf="item.svg" svgIcon="{{item.svg}}" matListIcon></mat-icon>
+          <mat-icon *ngIf="item.icon" matListIcon>{{item.icon}}</mat-icon>
+          {{item.title | translate}}
+        </a>
+      </ng-template>
+    </mat-nav-list>
+    <td-layout-nav color="none">
+      <div td-toolbar-content layout="row" layout-align="start center" flex>
+        <button mat-icon-button tdLayoutManageListOpen [hideWhenOpened]="true">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <span>{{'SYSTEM_MANAGEMENT' | translate}}</span>
+        <span flex></span>
+        <mat-select [(ngModel)]="systemType" (ngModelChange)="changeType($event)" [style.width.px]="140" [style.font-size.px]="16">
+          <mat-option [value]="''">
+            {{'ALL_SYSTEMS' | translate}}
+          </mat-option>
+          <mat-option [value]="'TERADATA'">
+            {{'TERADATA'}}
+          </mat-option>
+          <mat-option [value]="'ASTER'">
+            {{'ASTER'}}
+          </mat-option>
+          <mat-option [value]="'PRESTO'">
+            {{'PRESTO'}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div flex class="bgc">
+        <ng-template tdLoading="systems.dashboard">
+          <mat-list class="will-load">
+            <div id="no-system" class="mat-padding" *ngIf="!systems || systems.length === 0" layout="row" layout-align="center center">
+              <h3>{{'SYSTEMS.NO_SYSTEMS' | translate}}</h3>
+            </div>
+            <ng-template let-system let-last="last" ngFor [ngForOf]="systems">
+              <mat-list-item>
+                <mat-icon matListAvatar>dns</mat-icon>
+                <h3 matLine [id]="system?.nickname"> {{system?.nickname}} </h3>
+                <h4 id="{{system.id}}" matLine>
+                  {{system?.system_type}}
+                </h4>
+                <p matLine>
+                  {{system?.host}}:{{system?.port}}
+                </p>
+                <div flex="100" class="pad-left pad-right" layout="row">
+                  <span class="mat-body-1 text-left pad-left pad-right" flex="20">{{system?.system_attributes.attributes.database}}</span>
+                  <span class="mat-body-1 text-left pad-left pad-right" flex="20">{{system?.system_attributes.attributes.log_mech}}</span>
+                  <span class="mat-body-1 text-left pad-left pad-right" flex="20">{{system?.version}}</span>
+                </div>
+                <div flex="none" class="mat-secondary">
+                  <button mat-icon-button [mat-menu-trigger-for]="menu" [id]="system?.nickname + '-options'">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu x-position="before" #menu="matMenu">
+                    <button id="edit-system" mat-menu-item [routerLink]="['form', system.id]">
+                      <mat-icon class="tc-grey-600">edit</mat-icon>
+                      <span [translate]>EDIT</span>
+                    </button>
+                    <button id="delete-system" mat-menu-item (click)="deleteSystem(system.id)">
+                      <mat-icon class="tc-grey-600">delete</mat-icon>
+                      <span [translate]>DELETE</span>
+                    </button>
+                  </mat-menu>
+                </div>
+              </mat-list-item>
+              <mat-divider *ngIf="!last"></mat-divider>
+            </ng-template>
+          </mat-list>
+        </ng-template>
+      </div>
+    </td-layout-nav>
+  </td-layout-manage-list>
+</td-layout-nav>
