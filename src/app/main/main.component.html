@@ -12,9 +12,17 @@
           {{item.title | translate}}
         </a>
       </ng-template>
+      <ng-template let-item let-last="last" ngFor [ngForOf]="items">
+        <a mat-list-item target="_blank" href="{{item.link}}" (click)="layout.close()">
+          <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+          <mat-icon *ngIf="item.src" [svgIcon]="item.src"></mat-icon>
+          {{item.title}}
+        </a>
+      </ng-template>
+      <mat-divider></mat-divider>
       <a mat-list-item href="http://getcovalent.com" target="_blank" (click)="layout.close()">
         <mat-icon matListIcon svgIcon="covalent-mark"></mat-icon>
-        <span flex>{{'COVALENT_DOCS' | translate}}</span>
+        <span flex>{{'POWERED_BY_COVALENT' | translate}}</span>
         <mat-icon title="External link">launch</mat-icon>
       </a>
     </mat-nav-list>

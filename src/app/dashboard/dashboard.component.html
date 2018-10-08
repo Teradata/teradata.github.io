@@ -21,47 +21,37 @@
     </button>
   </div>
   <div flex>
-    <mat-toolbar>
-      <mat-toolbar-row>
-        <div flex layout="row" layout-align="start center">
-          <mat-icon class="push-left-sm push-right">dashboard</mat-icon>
-          <span class="push-left-xs">{{'DASHBOARD' | translate}}</span>
-          <span flex></span>
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
     <div tdMediaToggle="gt-xs" [mediaClasses]="['push']">
       <ng-template tdLoading="overview.dashboard">
         <div layout-gt-xs="row" layout-wrap>
           <div flex-gt-xs="100">
             <mat-card>
-              <mat-card-title>Teradata Branding</mat-card-title>
-              <mat-card-subtitle>follow these usages of the new logo, font &amp; colors</mat-card-subtitle>
+              <mat-card-title>{{'OPEN_SOURCE' | translate}}</mat-card-title>
               <mat-divider></mat-divider>
               <mat-card-content>
-                
+                {{'OPEN_SOURCE.DESCRIPTION' | translate}}
               </mat-card-content>
               <mat-divider></mat-divider>
               <mat-card-actions>
-                <button mat-button [routerLink]="[('/brand')]" color="accent" class="text-upper">{{'VIEW_MORE' | translate}}</button>
+                <a mat-button href="https://www.teradata.com/Products/Open-Source" color="accent" class="text-upper">{{'VIEW_MORE' | translate}}</a>
               </mat-card-actions>
             </mat-card>
           </div>
         </div>
         <div layout-gt-xs="row" layout-wrap>
           <ng-template let-item let-last="last" ngFor [ngForOf]="items">
-            <a href="{{item.link}}" class="mat-card-link" target="_blank" flex-md="50" flex-gt-md="25" layout="column">
+            <a href="{{item.link}}" class="mat-card-link" target="_blank" flex-sm="50" flex-gt-sm="25" layout="column">
               <mat-card href class="mat-card-colored" flex>
-                <mat-toolbar class="bgc-{{item.color}}" layout="column" layout-align="center center" layout-padding>
+                <mat-toolbar class="bgc-{{item.color}} pad-sm" layout="column" layout-align="center center" layout-padding>
                   <mat-icon *ngIf="item.icon" class="mat-icon-font-xl tc-white">{{item.icon}}</mat-icon>
-                  <mat-icon *ngIf="item.src" class="mat-icon-src" svgIcon="{{item.src}}"></mat-icon>
+                  <mat-icon *ngIf="item.src" class="mat-icon-src" [svgIcon]="item.src"></mat-icon>
                 </mat-toolbar>
-                <mat-card-content>
-                  <div layout="column" layout-padding>
-                    <div class="mat-subhead">{{item.title}}</div>
-                    <div class="mat-caption tc-grey-600"> {{item.description}} </div>
+                <div class="pad">
+                  <div layout="column">
+                    <div class="mat-title push-bottom-none">{{item.title}}</div>
+                    <div class="mat-body-1 tc-td-slate-700"> {{item.description}} </div>
                   </div>
-                </mat-card-content>
+                </div>
               </mat-card>
             </a>
           </ng-template>

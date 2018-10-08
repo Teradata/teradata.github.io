@@ -13,3 +13,7 @@ a[mat-icon-button] {
 .text-capital {
   text-transform: capitalize;
 }
+
+.mat-card-colored mat-toolbar mat-icon, .mat-card-colored mat-toolbar .mat-icon {
+    opacity: 0.95;
+}

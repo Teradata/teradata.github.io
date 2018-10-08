@@ -1,5 +1,10 @@
 {
     "APP_TITLE": "Open Source",
+    "APP_DESCRIPTION": "Open Source projects from Teradata",
+    "OPEN_SOURCE": "Unleashing the Potential of Open Source",
+    "OPEN_SOURCE.DESCRIPTION": "Teradata is proud to contribute to open source projects, and we know how commercial and open source should work together. That’s why we engineer the best of both worlds; pioneering new approaches to open source software while improving the commercial and open source landscape for everyone, ultimately helping customers unleash their potential.",
+    "POWERED_BY_COVALENT": "Powered by Covalent",
+    "PROJECTS": "Projects",
     "SESSION_EXPIRED": "The session has expired. Please log in again",
     "ENTITY_TOO_LARGE": "Entity too large.",
     "SERVICE_DOWN": "Services might be down (Request timeout)",

@@ -40,11 +40,29 @@ export class DashboardComponent implements OnInit {
 
   async loadProjects(): Promise<void> {
     this.items = [{
+      title: 'Jupyter SQL Extension',
+      link: 'https://github.com/Teradata/jupyterextensions',
+      src: 'jupyter',
+      color: 'td-slate',
+      description: 'The Teradata SQL extension for Jupyter provides a SQL kernel and navigator UI extension that allows the user to explore and execute queries on Teradata Vantage',
+    }, {
+        title: 'Covalent',
+        link: 'https://github.com/Teradata/covalent',
+        src: 'covalent',
+        color: 'td-slate',
+        description: 'Teradata UI Platform built on Angular & Material Design',
+    }, {
       title: 'Teradata Presto',
       link: 'https://github.com/Teradata/presto',
       src: 'presto',
       color: 'indigo-600',
       description: 'Teradata Distribution of Presto -- A Distributed SQL Query Engine for Big Data',
+    }, {
+        title: 'PyTd',
+        link: 'https://github.com/Teradata/PyTd',
+        src: 'python',
+        color: 'indigo-900',
+        description: 'A Python Module to make it easy to script powerful interactions with Teradata Database in a DevOps friendly way.',
     }, {
       title: 'TPC-DS',
       link: 'https://github.com/Teradata/tpcds',
@@ -58,18 +76,6 @@ export class DashboardComponent implements OnInit {
       color: 'cyan-600',
       description: 'A tool to install, configure and manage Presto installations',
     }, {
-      title: 'Covalent',
-      link: 'https://github.com/Teradata/covalent',
-      src: 'covalent',
-      color: 'orange-900',
-      description: 'Teradata UI Platform built on Angular-Material 2.0',
-    }, {
-      title: 'PyTd',
-      link: 'https://github.com/Teradata/PyTd',
-      src: 'python',
-      color: 'yellow-800',
-      description: 'A Python Module to make it easy to script powerful interactions with Teradata Database in a DevOps friendly way.',
-    }, {
       title: 'Covalent Quickstart',
       link: 'https://github.com/Teradata/covalent-quickstart',
       icon: 'flash_on',
@@ -78,7 +84,7 @@ export class DashboardComponent implements OnInit {
     }, {
       title: 'SQLAlchemy Teradata',
       link: 'https://github.com/Teradata/sqlalchemy-teradata',
-      src: 'teradata',
+      icon: 'code',
       color: 'red-700',
       description: 'A SQLAlchemy dialect for Teradata',
     }, {
@@ -87,12 +93,6 @@ export class DashboardComponent implements OnInit {
       src: 'presto',
       color: 'blue-800',
       description: 'A testing framework for Presto',
-    }, {
-      title: 'Listener Documentation',
-      link: 'https://github.com/Teradata/listener-documentation',
-      src: 'listener',
-      color: 'orange-600',
-      description: 'Teradata Listener Documentation Site',
     }, {
       title: 'Presto Yarn',
       link: 'https://github.com/Teradata/presto-yarn',

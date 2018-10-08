@@ -41,6 +41,9 @@ export class AppComponent {
     this._iconRegistry.addSvgIcon('presto', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/presto.svg'));
     this._iconRegistry.addSvgIcon('maven', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/maven.svg'));
     this._iconRegistry.addSvgIcon('java', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/java.svg'));
+    this._iconRegistry.addSvgIcon('python', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/python.svg'));
+    this._iconRegistry.addSvgIcon('jupyter', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/jupyter.svg'));
+    this._iconRegistry.addSvgIcon('jupyter-reverse', this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/jupyter-reverse.svg'));
   }
 
 }
