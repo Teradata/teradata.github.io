@@ -1,0 +1,542 @@
+@import "covalent-icons-variables";
+
+@font-face {
+  font-family: 'covalent-icons';
+  src:
+    url('#{$icomoon-font-path}/covalent-icons.ttf?133x1t') format('truetype'),
+    url('#{$icomoon-font-path}/covalent-icons.woff?133x1t') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.covalent-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'covalent-icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  
+  /* Enable Ligatures ================ */
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flip_down {
+  &:before {
+    content: $flip_down;
+  }
+}
+.flip_up {
+  &:before {
+    content: $flip_up;
+  }
+}
+.expand {
+  &:before {
+    content: $expand;
+  }
+}
+.centerpoint {
+  &:before {
+    content: $centerpoint;
+  }
+}
+.network_users {
+  &:before {
+    content: $network_users;
+  }
+}
+.window {
+  &:before {
+    content: $window;
+  }
+}
+.component {
+  &:before {
+    content: $component;
+  }
+}
+.modules {
+  &:before {
+    content: $modules;
+  }
+}
+.package {
+  &:before {
+    content: $package;
+  }
+}
+.chart_plot {
+  &:before {
+    content: $chart_plot;
+  }
+}
+.chart_bars {
+  &:before {
+    content: $chart_bars;
+  }
+}
+.chart_bars_down {
+  &:before {
+    content: $chart_bars_down;
+  }
+}
+.chart_bars_horiz {
+  &:before {
+    content: $chart_bars_horiz;
+  }
+}
+.chart_bars_up {
+  &:before {
+    content: $chart_bars_up;
+  }
+}
+.chart_bars_line {
+  &:before {
+    content: $chart_bars_line;
+  }
+}
+.chart_bars_2 {
+  &:before {
+    content: $chart_bars_2;
+  }
+}
+.chart_spline {
+  &:before {
+    content: $chart_spline;
+  }
+}
+.chart_line {
+  &:before {
+    content: $chart_line;
+  }
+}
+.chart_area {
+  &:before {
+    content: $chart_area;
+  }
+}
+.chart_area_stacked {
+  &:before {
+    content: $chart_area_stacked;
+  }
+}
+.chart {
+  &:before {
+    content: $chart;
+  }
+}
+.atom {
+  &:before {
+    content: $atom;
+  }
+}
+.beaker {
+  &:before {
+    content: $beaker;
+  }
+}
+.cube {
+  &:before {
+    content: $cube;
+  }
+}
+.tube {
+  &:before {
+    content: $tube;
+  }
+}
+.tree {
+  &:before {
+    content: $tree;
+  }
+}
+.org {
+  &:before {
+    content: $org;
+  }
+}
+.nodes {
+  &:before {
+    content: $nodes;
+  }
+}
+.sitemap {
+  &:before {
+    content: $sitemap;
+  }
+}
+.hierarchy {
+  &:before {
+    content: $hierarchy;
+  }
+}
+.org_center {
+  &:before {
+    content: $org_center;
+  }
+}
+.heartbeat {
+  &:before {
+    content: $heartbeat;
+  }
+}
+.tools {
+  &:before {
+    content: $tools;
+  }
+}
+.csv {
+  &:before {
+    content: $csv;
+  }
+}
+.exe {
+  &:before {
+    content: $exe;
+  }
+}
+.html {
+  &:before {
+    content: $html;
+  }
+}
+.iso {
+  &:before {
+    content: $iso;
+  }
+}
+.java {
+  &:before {
+    content: $java;
+  }
+}
+.javascript {
+  &:before {
+    content: $javascript;
+  }
+}
+.php {
+  &:before {
+    content: $php;
+  }
+}
+.python {
+  &:before {
+    content: $python;
+  }
+}
+.sql {
+  &:before {
+    content: $sql;
+  }
+}
+.xml {
+  &:before {
+    content: $xml;
+  }
+}
+.yaml {
+  &:before {
+    content: $yaml;
+  }
+}
+.file_bin {
+  &:before {
+    content: $file_bin;
+  }
+}
+.file_sql {
+  &:before {
+    content: $file_sql;
+  }
+}
+.file_code {
+  &:before {
+    content: $file_code;
+  }
+}
+.file_brackets {
+  &:before {
+    content: $file_brackets;
+  }
+}
+.file_data {
+  &:before {
+    content: $file_data;
+  }
+}
+.file_terminal {
+  &:before {
+    content: $file_terminal;
+  }
+}
+.data_upload {
+  &:before {
+    content: $data_upload;
+  }
+}
+.server_upload {
+  &:before {
+    content: $server_upload;
+  }
+}
+.data_search {
+  &:before {
+    content: $data_search;
+  }
+}
+.server_search {
+  &:before {
+    content: $server_search;
+  }
+}
+.data_shield {
+  &:before {
+    content: $data_shield;
+  }
+}
+.server_shield {
+  &:before {
+    content: $server_shield;
+  }
+}
+.data_info {
+  &:before {
+    content: $data_info;
+  }
+}
+.server_info {
+  &:before {
+    content: $server_info;
+  }
+}
+.data_lock {
+  &:before {
+    content: $data_lock;
+  }
+}
+.server_lock {
+  &:before {
+    content: $server_lock;
+  }
+}
+.server_network {
+  &:before {
+    content: $server_network;
+  }
+}
+.data_network {
+  &:before {
+    content: $data_network;
+  }
+}
+.data_help {
+  &:before {
+    content: $data_help;
+  }
+}
+.server-question-mark-2 {
+  &:before {
+    content: $server-question-mark-2;
+  }
+}
+.data_refresh {
+  &:before {
+    content: $data_refresh;
+  }
+}
+.server_refresh {
+  &:before {
+    content: $server_refresh;
+  }
+}
+.data_settings {
+  &:before {
+    content: $data_settings;
+  }
+}
+.server_settings {
+  &:before {
+    content: $server_settings;
+  }
+}
+.server {
+  &:before {
+    content: $server;
+  }
+}
+.data {
+  &:before {
+    content: $data;
+  }
+}
+.data_add {
+  &:before {
+    content: $data_add;
+  }
+}
+.server_add {
+  &:before {
+    content: $server_add;
+  }
+}
+.data_alert {
+  &:before {
+    content: $data_alert;
+  }
+}
+.server_alert {
+  &:before {
+    content: $server_alert;
+  }
+}
+.data_block {
+  &:before {
+    content: $data_block;
+  }
+}
+.server_block {
+  &:before {
+    content: $server_block;
+  }
+}
+.data_bug {
+  &:before {
+    content: $data_bug;
+  }
+}
+.data_check {
+  &:before {
+    content: $data_check;
+  }
+}
+.server_check {
+  &:before {
+    content: $server_check;
+  }
+}
+.data_close {
+  &:before {
+    content: $data_close;
+  }
+}
+.server-close-2 {
+  &:before {
+    content: $server-close-2;
+  }
+}
+.cloud_wifi {
+  &:before {
+    content: $cloud_wifi;
+  }
+}
+.cloud_server {
+  &:before {
+    content: $cloud_server;
+  }
+}
+.cloud_settings {
+  &:before {
+    content: $cloud_settings;
+  }
+}
+.cloud_shield {
+  &:before {
+    content: $cloud_shield;
+  }
+}
+.transfer_group {
+  &:before {
+    content: $transfer_group;
+  }
+}
+.network_cable {
+  &:before {
+    content: $network_cable;
+  }
+}
+.network_computer {
+  &:before {
+    content: $network_computer;
+  }
+}
+.box_upload {
+  &:before {
+    content: $box_upload;
+  }
+}
+.box_download {
+  &:before {
+    content: $box_download;
+  }
+}
+.upload2 {
+  &:before {
+    content: $upload2;
+  }
+}
+.upload3 {
+  &:before {
+    content: $upload3;
+  }
+}
+.transfer_network {
+  &:before {
+    content: $transfer_network;
+  }
+}
+.download2 {
+  &:before {
+    content: $download2;
+  }
+}
+.download3 {
+  &:before {
+    content: $download3;
+  }
+}
+.usb {
+  &:before {
+    content: $usb;
+  }
+}
+.harddrive {
+  &:before {
+    content: $harddrive;
+  }
+}
+.disc {
+  &:before {
+    content: $disc;
+  }
+}
+.port {
+  &:before {
+    content: $port;
+  }
+}
+.chip {
+  &:before {
+    content: $chip;
+  }
+}
+
