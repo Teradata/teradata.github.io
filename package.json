@@ -1,11 +1,11 @@
 {
-  "name": "app-template",
-  "version": "1.0.0",
+  "name": "td-open-source",
+  "version": "2.0.0",
   "private": true,
-  "description": "Base app template with Covalent + Ecosystem Services",
+  "description": "Teradata Open Source",
   "keywords": [
-    "appcenter",
-    "template"
+    "teradata",
+    "open source"
   ],
   "scripts": {
     "e2e": "./node_modules/.bin/ng e2e",
@@ -20,12 +20,7 @@
     "coverage:win": "start chrome ./coverage/index.html",
     "coverage:mac": "open -a \"Google Chrome\" coverage/index.html",
     "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
-    "build:prod": "node --max_old_space_size=8192 ./node_modules/.bin/ng build --aot  --aot --prod --source-map=false --optimization",
-    "build-docker": "gulp build-docker",
-    "push-docker": "gulp push-docker",
-    "tag-docker": "gulp tag-docker",
-    "docker:build": "rimraf ./dist && rimraf ./deploy && npm run build:prod && gulp move-required-files && npm run build-docker",
-    "docker:push": "npm run docker:build && gulp tag-docker && gulp push-docker"
+    "build:prod": "node --max_old_space_size=8192 ./node_modules/.bin/ng build --aot  --aot --prod --source-map=false --optimization"
   },
   "engines": {
     "node": ">=8.9.4",
@@ -34,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.td.teradata.com/appcenter/app-template"
+    "url": "https://github.com/Teradata/teradata.github.io"
   },
   "bugs": {
-    "url": "https://github.td.teradata.com/appcenter/app-template/issues"
+    "url": "https://github.com/Teradata/teradata.github.io/issues"
   },
   "license": "MIT",
   "author": "Teradata Experience Team",
@@ -59,12 +54,9 @@
     "@angular/router": "6.0.0",
     "@covalent/core": "2.0.0-beta.1",
     "@covalent/http": "2.0.0-beta.1",
-    "@covalent/highlight": "2.0.0-beta.1",
-    "@covalent/echarts": "git+https://github.com/Teradata/covalent-echarts-nightly/",
     "@ngx-translate/core": "10.0.1",
     "@ngx-translate/http-loader": "3.0.1",
     "core-js": "^2.4.1",
-    "echarts": "4.1.0",
     "hammerjs": "^2.0.8",
     "rxjs": "^6.1.0",
     "web-animations-js": "2.3.1",

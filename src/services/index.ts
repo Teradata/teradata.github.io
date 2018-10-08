@@ -6,7 +6,4 @@
 export { LoginService } from './login.service';
 export { JWTDataService, IJWTData, IUser } from './jwt-data.service';
 export { ErrorService } from './error.service';
-export { SystemService, ISystem } from './system.service';
-export { QueryService, IQueryPayload, IQueryResultSet, IQueryInfo } from './query.service';
-export { AppsService, IApp, AppType } from './apps.service';
 export { JWTDbCredentialsService } from './jwt-db-credentials.service';
