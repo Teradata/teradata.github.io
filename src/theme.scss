@@ -1,6 +1,5 @@
 @import '~@angular/material/theming';
 @import '~@covalent/core/theming/all-theme';
-@import '~@covalent/highlight/highlight-theme';
 
 // Plus imports for other components in your app.
 
@@ -46,7 +45,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 // that you are using.
 @include angular-material-theme($theme);
 @include covalent-theme($theme);
-@include covalent-highlight-theme();
 @include teradata-brand($theme);
 
 /* ------------------------------------------------------------------------------- */
