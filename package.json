@@ -20,7 +20,9 @@
     "coverage:win": "start chrome ./coverage/index.html",
     "coverage:mac": "open -a \"Google Chrome\" coverage/index.html",
     "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
-    "build:prod": "node --max_old_space_size=8192 ./node_modules/.bin/ng build --aot  --aot --prod --source-map=false --optimization"
+    "build:prod": "node --max_old_space_size=8192 ./node_modules/.bin/ng build --aot  --aot --prod --source-map=false --optimization",
+    "ghpages:deploy": "npm run build:docs && bash scripts/master-deploy",
+    "build:docs": "node --max_old_space_size=5048 ./node_modules/@angular/cli/bin/ng build --aot --prod --source-map=false --optimization"
   },
   "engines": {
     "node": ">=8.9.4",
