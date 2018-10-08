@@ -1,0 +1,15 @@
+#!/bin/bash
+git branch -f master
+git checkout master
+echo 'Created and Checked out master branch'
+
+git reset --hard origin/develop
+
+cp -r dist/* .
+
+echo 'Tracking files'
+git add -A .
+echo 'Commiting files'
+git commit -a -m 'master update'
+echo 'Pushing files into master branch'
+git push origin master --force
